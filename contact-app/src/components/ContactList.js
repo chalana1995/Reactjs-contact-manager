@@ -5,6 +5,7 @@ const ContactList = (props) => {
     console.log(props);
 
     const renderContactList = props.contacts.map((contact) => {
+        console.log("contactlist =====",contact);
         return (
            <ContactCard contact={contact} />
         )
