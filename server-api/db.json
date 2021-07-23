@@ -1,5 +1,29 @@
 {
-    "contacts" : [
-
+    "contacts": [
+        {
+            "id": "26bb7571-9e6b-417b-9828-b9f38b9cc332",
+            "name": "chalana",
+            "email": "chalana@gmail.com"
+        },
+        {
+            "id": "f0101ab4-598c-45e5-b519-42e8c08f5500",
+            "name": "charith",
+            "email": "charith@gmail.com"
+        },
+        {
+            "id": "4538f480-d62a-4305-ade7-0db8253b8a54",
+            "name": "lakith",
+            "email": "lakith@gmail.com"
+        },
+        {
+            "id": "909d116e-6337-4cfb-8cdc-c12bbe785a74",
+            "name": "Sachin",
+            "email": "sachin@gmail.com"
+        },
+        {
+            "id": "9b413b67-3905-482c-a7ba-28e3ba231222",
+            "name": "Rusiru",
+            "email": "rusiru@gmail.com"
+        }
     ]
 }
