@@ -14,8 +14,10 @@ function App() {
 
   const LOCAL_STORAGE_KEY = "contacts"
 
-  const retriveContacts = async() => {
-    const response = await api.get('/contacts')
+  const retriveContacts = async () => {
+    const response = await api.get("contacts");
+    console.log("==== response data ====", response);
+    return response.data;
   }
 
   const addContactHandler = (contact) => {
@@ -33,6 +35,14 @@ function App() {
   useEffect(() => {
     // const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     // setContacts(retriveContacts)
+
+    const getAllContacts = async () => {
+      const allcontacts = await retriveContacts();
+      if (allcontacts) {
+        setContacts(allcontacts);
+      }
+    }
+    getAllContacts();
   }, [])
 
   useEffect(() => {
