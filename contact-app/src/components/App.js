@@ -6,7 +6,8 @@ import Header from './Header';
 import AddContact from './AddContact';
 import ContactList from './ContactList';
 import ContactDetail from './ContactDetail';
-import api from '../api/contact';
+//import api from '../api/contact';
+import axios from 'axios';
 
 function App() {
 
@@ -14,9 +15,8 @@ function App() {
 
   const LOCAL_STORAGE_KEY = "contacts"
 
-  const retriveContacts = async () => {
-    const response = await api.get("contacts");
-    console.log("==== response data ====", response);
+  const retriveContacts = async() => {
+    const response = await axios.get('http://localhost:3006/contacts');
     return response.data;
   }
 
@@ -36,7 +36,7 @@ function App() {
     // const retriveContacts = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     // setContacts(retriveContacts)
 
-    const getAllContacts = async () => {
+    const getAllContacts = async() => {
       const allcontacts = await retriveContacts();
       if (allcontacts) {
         setContacts(allcontacts);
